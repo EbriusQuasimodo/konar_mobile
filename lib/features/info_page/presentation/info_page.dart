@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:konar_mobile/core/utils/app_router.dart';
 import 'package:konar_mobile/features/info_page/presentation/widget/basic_card_widget.dart';
 import 'package:konar_mobile/features/info_page/presentation/widget/taxi_card_widget.dart';
-import 'package:konar_mobile/features/main_page/presentation/map_controller.dart';
-import 'package:konar_mobile/features/map_page/presentation/map_page.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:konar_mobile/features/map_page/presentation/map_controller.dart';
 
 class InfoPage extends ConsumerStatefulWidget {
   const InfoPage({
@@ -32,28 +29,25 @@ class _InfoPageState extends ConsumerState<InfoPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                   const TaxiCardWidget(),
+                    const TaxiCardWidget(),
                     const SizedBox(
                       height: 8,
                     ),
                     BasicCardWidget(
                         onButtonTap: () {
                           ref
-                              .watch(
-                              whatsViewOnMapStateProvider.notifier)
+                              .watch(whatsViewOnMapStateProvider.notifier)
                               .state = 'Столовая';
                           ref
-                              .watch(longitudeListOnMapStateProvider
-                              .notifier)
+                              .watch(longitudeListOnMapStateProvider.notifier)
                               .state = [61.4749, 61.48474, 61.45938];
                           ref
-                              .watch(latitudeListOnMapStateProvider
-                              .notifier)
+                              .watch(latitudeListOnMapStateProvider.notifier)
                               .state = [55.1443, 55.14536, 55.14645];
 
                           ref.read(goRouterProvider).goNamed(
-                            AppRoute.mapPage.name,
-                          );
+                                AppRoute.mapPage.name,
+                              );
                         },
                         cardName: 'Столовые',
                         workTime: '10:00 - 17:00'),

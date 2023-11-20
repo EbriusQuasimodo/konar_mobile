@@ -1,16 +1,13 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:konar_mobile/core/presentation/navigation_bar_icon.dart';
 import 'package:konar_mobile/core/presentation/not_found_screen.dart';
-import 'package:konar_mobile/features/guest_page.dart';
 import 'package:konar_mobile/features/info_page/presentation/info_page.dart';
 import 'package:konar_mobile/features/login_page/data/login_repository.dart';
 import 'package:konar_mobile/features/login_page/presentation/login_screen.dart';
 import 'package:konar_mobile/features/main_page/presentation/main_page.dart';
-import 'package:konar_mobile/features/main_page/presentation/map_controller.dart';
+import 'package:konar_mobile/features/map_page/presentation/map_controller.dart';
 import 'package:konar_mobile/features/map_page/presentation/map_page.dart';
 import 'package:konar_mobile/features/profile_page/presentation/profile_page.dart';
 

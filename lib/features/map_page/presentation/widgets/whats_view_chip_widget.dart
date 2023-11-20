@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:konar_mobile/features/main_page/presentation/map_controller.dart';
+import 'package:konar_mobile/features/map_page/presentation/map_controller.dart';
 
 class WhatsViewChipWidget extends ConsumerStatefulWidget {
   final String? itemName;
