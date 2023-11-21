@@ -135,6 +135,7 @@ class _ScaffoldWithNestedNavigationState
     extends ConsumerState<ScaffoldWithNestedNavigation> {
   void _goBranch(int index) {
     setState(() {
+      ref.watch(initialZoomOnMapStateProvider.notifier).state = 15;
       ref.watch(whatsViewOnMapStateProvider.notifier).state = '';
       ref.watch(latitudeListOnMapStateProvider.notifier).state = [];
       ref.watch(longitudeListOnMapStateProvider.notifier).state = [];

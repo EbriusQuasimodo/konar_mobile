@@ -35,6 +35,7 @@ class _InfoPageState extends ConsumerState<InfoPage> {
                     ),
                     BasicCardWidget(
                         onButtonTap: () {
+                          ref.watch(initialZoomOnMapStateProvider.notifier).state = 13.4;
                           ref
                               .watch(whatsViewOnMapStateProvider.notifier)
                               .state = 'Столовая';
@@ -56,6 +57,7 @@ class _InfoPageState extends ConsumerState<InfoPage> {
                     ),
                     BasicCardWidget(
                         onButtonTap: () {
+                          ref.watch(initialZoomOnMapStateProvider.notifier).state = 13.4;
                           ref
                               .watch(whatsViewOnMapStateProvider.notifier)
                               .state = 'Мед. пункт';
@@ -76,6 +78,7 @@ class _InfoPageState extends ConsumerState<InfoPage> {
                     ),
                     BasicCardWidget(
                         onButtonTap: () {
+                          ref.watch(initialZoomOnMapStateProvider.notifier).state = 13.4;
                           ref
                               .watch(whatsViewOnMapStateProvider.notifier)
                               .state = 'Тренажерный зал';

@@ -47,6 +47,7 @@ class _WhatsViewChipWidgetState extends ConsumerState<WhatsViewChipWidget> {
         setState(() {
           if (value) {
             if (!widget.filters.contains(widget.itemName)) {
+              ref.watch(initialZoomOnMapStateProvider.notifier).state = 13.4;
               widget.filters.clear();
               widget.filters.add(widget.itemName!);
               switch (widget.itemName) {
@@ -107,6 +108,7 @@ class _WhatsViewChipWidgetState extends ConsumerState<WhatsViewChipWidget> {
             widget.filters.removeWhere((String name) {
               return name == widget.itemName;
             });
+            ref.watch(initialZoomOnMapStateProvider.notifier).state = 15;
             ref.watch(whatsViewOnMapStateProvider.notifier).state = '';
             ref.watch(longitudeListOnMapStateProvider.notifier).state = [];
             ref.watch(latitudeListOnMapStateProvider.notifier).state = [];
